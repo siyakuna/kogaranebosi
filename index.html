@@ -66,10 +66,8 @@
     <div style="border-bottom: 4px solid #ff7300;padding: 2px;background: #fff700;font-size: 16px;">
         <a class="page" title="ページを移動します">警視庁</a> / <a class="page" title="ページを移動します">組織犯罪対策部</a> / <a class="page" title="ページを移動します">公安局刑事課アンドロイド事件捜査係</a> / <a class="page" title="ページを移動します">署員ファイル</a> / <a class="page" title="ページを移動します">VOID</a> / <a title="現在のページです">小雀 子星</a>
     </div>
-    <div style="position: absolute; pointer-events: none;">
-        <img class="bill-r" style=" transform: translateX(1395px); width: 500px;" src="https://cdn.discordapp.com/attachments/782896125924474900/1228175815577960560/766_20240412115152.png?ex=662b16dc&is=6618a1dc&hm=5d6a93aa6ab2378fba3aaf9880329f7519e7389ac83f9c5ceaefa80ea92bb94e&" >
-        <img class="bill-r" style=" transform: translateX(-608px); width: 500px;" src="https://media.discordapp.net/attachments/782896125924474900/1228175816135933963/766_20240412115043.png?ex=662b16dc&is=6618a1dc&hm=7d44f605f076323aa10fa55a56615556b2b1def80fa13a6a4b675088d51fb5d1&=&format=webp&quality=lossless&width=748&height=1332">
-    </div>
+    <div class="fill">
+    <img class="bill-l" width="500px" src="https://cdn.discordapp.com/attachments/782896125924474900/1228175816135933963/766_20240412115043.png?ex=662b16dc&is=6618a1dc&hm=7d44f605f076323aa10fa55a56615556b2b1def80fa13a6a4b675088d51fb5d1&">
     <div class="main-p">
         <h2 style="font-size: 40px;">小雀　子星</h2>
         <hr>
@@ -90,7 +88,10 @@
             HO3との関係<br>パートナーであるHO3との関係は良好。度々HO3の悪戯行為に対して難色を示すが、小雀はある程度了承しているようです。
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </p>
-    </div></div>
+       </div>
+    </div>
+    <img class="bill-r" width="500px" src="https://media.discordapp.net/attachments/782896125924474900/1228175815577960560/766_20240412115152.png?ex=662b16dc&is=6618a1dc&hm=5d6a93aa6ab2378fba3aaf9880329f7519e7389ac83f9c5ceaefa80ea92bb94e&=&format=webp&quality=lossless&width=748&height=1332">
+    </div>
     <style> 
 * {
     margin: 0px;
@@ -119,12 +120,19 @@ header{
     animation-duration: 1s;
     cursor: pointer;
 }
+.fill{
+    display: flex;
+    justify-content: center;
+}
+.bill-l,.bill-r{
+    pointer-events: none;
+}
 .main-p{
-    max-width: 1000px;
     background-color: #f3f3f3;
     margin-left: auto;
     margin-right: auto;
 }
+
 まだありません{
     width: 10ch;
    animation: typing 1s steps(5), blink .5s step-end infinite alternate;
@@ -144,6 +152,7 @@ header{
  }
 .main{
     animation: txtin 1s both;
+    pointer-events: none;
 }
  @keyframes txtin {
     from{
@@ -171,6 +180,7 @@ header{
     display: none;
     opacity:  0.9;
     animation: tatiein 1s;
+    pointer-events: none;
 }
 @keyframes tatiein {
     0%{opacity: 0;}
