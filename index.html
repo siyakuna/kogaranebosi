@@ -69,11 +69,12 @@
     <div class="fill">
     <img class="bill-l" width="500px" src="https://cdn.discordapp.com/attachments/782896125924474900/1228175816135933963/766_20240412115043.png?ex=662b16dc&is=6618a1dc&hm=7d44f605f076323aa10fa55a56615556b2b1def80fa13a6a4b675088d51fb5d1&">
     <div class="main-p">
-        <h2 style="font-size: 40px;">小雀　子星</h2>
+        <h2 style="font-size: 40px; color: #ff7300;">小雀　子星</h2>
         <hr>
         
         <img class="icon" width="300px" src="https://media.discordapp.net/attachments/782896125924474900/1201181278804905984/2024-01-29_0.05.26.png?ex=661bf0bd&is=66097bbd&hm=4f9405527e58811d4cca089f10f989ce9a593544042378870897911e1f60faf4&=&format=webp&quality=lossless&width=788&height=684">
         <img class="tatie" src="https://media.discordapp.net/attachments/1195201324296437812/1199751051495096320/714_20240125012120.png?ex=662931bc&is=6616bcbc&hm=0bc368650694959bbef914d880b13e81c8c508dff119d8ca5a19e6a4e3e389cd&=&format=webp&quality=lossless&width=398&height=700">
+        <div class="popup-bg-cover"></div>
         <div class="main-fx">
         <p class="main">
             <br>
@@ -81,12 +82,15 @@
             <br><br>
             所持者:HO3
             <br><br>
-            <hr><br>
+            <hr>
+            <div class="main-txt">
+            <br>
             説明<br>一般的に普及してるVOIDの旧型。HO3のパートナーロボットであり積極的に事件の捜査をHO3と共に行なっています。背中部分に羽を模した飛行器具がありますが現在は数cm浮く程度の機能しか持ち合わせていません。そのため特質した機能、技能は有していません。
             他特徴として、頭の右側の通信用小型パラボラアンテナが備えられています。このアンテナに触れることを小雀はとても嫌がります。触れた場合離そうと抵抗しますが触れたことにより上手く力を出せなくなります。そのため触れ続けることは容易ですが推奨しません。
             戦闘時は拳銃を使用し応戦します。<br><br>
             HO3との関係<br>パートナーであるHO3との関係は良好。度々HO3の悪戯行為に対して難色を示すが、小雀はある程度了承しているようです。
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>あ
+        </div>
         </p>
        </div>
     </div>
@@ -99,7 +103,9 @@
 }
 body{
     background-color: #fff700;
+    overflow-x: hidden;
 }
+
 header{
     max-width: 100%;
     height: 120px;
@@ -123,14 +129,39 @@ header{
 .fill{
     display: flex;
     justify-content: center;
+    width: auto;
 }
-.bill-l,.bill-r{
+.bill-l{
     pointer-events: none;
+    
+    animation: bill-l-in 5s;
+    float: right;
+}
+.bill-r{
+    pointer-events: none;
+    animation: bill-r-in 5s;
+}
+@keyframes bill-l-in {
+   
 }
 .main-p{
-    background-color: #f3f3f3;
+    background-color: #316074;
     margin-left: auto;
     margin-right: auto;
+    animation: ma-in 3s;
+    margin: 0;
+    height: 1000px;
+    overflow: hidden;
+}
+@keyframes ma-in {
+    0%{
+        width: 0%;
+    }
+    50%{ width: 0%;}
+    100%{
+        width: 100%;
+        
+    }
 }
 
 まだありません{
@@ -151,15 +182,22 @@ header{
    }
  }
 .main{
-    animation: txtin 1s both;
+    animation: txtin 3s both;
     pointer-events: none;
+    width: auto;
+}
+.main-txt{
+    animation: txtin 3s both;
+    pointer-events: none;
+    width: auto;
 }
  @keyframes txtin {
-    from{
-        transform: translateY(-10%); 
+    0%{
+        transform: translateY(-10px); 
         opacity: 0;
     }
-    to{
+    60%{ transform: translateY(-10px); opacity: 0;}
+    100%{
         transform: translateY(0);
     opacity: 1;
     }
@@ -169,7 +207,21 @@ header{
     text-align:right;
     border: 4px solid #ff7300;
     transform: translateY(-1px);
-    
+    animation: txtin 3.5s both;
+}
+.popup-bg-cover{
+	position: fixed; /* ブラウザの定位置に固定 */
+	background: rgba(0, 0, 0, .5); /* 背景色を半透明の黒色に */
+	width: 100%; /* 要素の横幅を画面全体に */
+	height: 100%; /* 要素の高さを画面全体に */
+	top: 0; /* 要素の固定位置をブラウザ最上部に合わせる */
+	left: 0; /* 要素の固定位置をブラウザ左側に合わせる */
+	z-index: 999; /* 要素をコンテンツより前面に（要調整） */
+    pointer-events: none;
+    display: none;
+}
+.icon:hover +.popup-bg-cover{
+    display: inline; 
 }
 .icon:hover + .tatie{
     display: inline; 
@@ -181,6 +233,7 @@ header{
     opacity:  0.9;
     animation: tatiein 1s;
     pointer-events: none;
+    z-index:10000
 }
 @keyframes tatiein {
     0%{opacity: 0;}
