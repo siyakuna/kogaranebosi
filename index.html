@@ -78,18 +78,19 @@
         <div class="main-fx">
         <p class="main">
             <br>
-            製造番号:8022753
+            <span  class="orange">製</span>造番号:8022753
             <br><br>
-            所持者:HO3
+            <span class="orange">所</span>持者:HO3
             <br><br>
             <hr>
             <div class="main-txt">
             <br>
-            説明<br>一般的に普及してるVOIDの旧型。HO3のパートナーロボットであり積極的に事件の捜査をHO3と共に行なっています。背中部分に羽を模した飛行器具がありますが現在は数cm浮く程度の機能しか持ち合わせていません。そのため特質した機能、技能は有していません。
+            <span class="orange">説</span>明<br>一般的に普及してるVOIDの旧型。HO3のパートナーロボットであり積極的に事件の捜査をHO3と共に行なっています。背中部分に羽を模した飛行器具がありますが現在は数cm浮く程度の機能しか持ち合わせていません。そのため特質した機能、技能は有していません。
             他特徴として、頭の右側の通信用小型パラボラアンテナが備えられています。このアンテナに触れることを小雀はとても嫌がります。触れた場合離そうと抵抗しますが触れたことにより上手く力を出せなくなります。そのため触れ続けることは容易ですが推奨しません。
             戦闘時は拳銃を使用し応戦します。<br><br>
-            HO3との関係<br>パートナーであるHO3との関係は良好。度々HO3の悪戯行為に対して難色を示すが、小雀はある程度了承しているようです。
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>あ
+           <span class="orange">H</span>O3との関係 <br>パートナーであるHO3との関係は良好。度々HO3の悪戯行為に対して難色を示すが、小雀はある程度了承しているようです。
+           <br><br>
+            <span class="orange">補</span>遺<br>
         </div>
         </p>
        </div>
@@ -144,6 +145,13 @@ header{
 @keyframes bill-l-in {
    
 }
+.main-fx{
+    color: #ffffff;
+}
+ .orange{
+    color: #ff7300;
+    font-size: 30px;
+ }
 .main-p{
     background-color: #316074;
     margin-left: auto;
@@ -228,16 +236,16 @@ header{
 }
 .tatie{
     position: absolute;
-    transform: translateX(270px);
+    box-shadow: 10px 10px 10px #00000072;
     display: none;
     opacity:  0.9;
-    animation: tatiein 1s;
+    animation: tatiein 0.5s;
     pointer-events: none;
     z-index:10000
 }
 @keyframes tatiein {
-    0%{opacity: 0;}
-    100%{opacity:  0.9;}
+    0%{opacity: 0; transform: scale(95%, 95%);}
+    100%{opacity:  0.9; transform: scale(100%, 100%);}
 }
 hr{
     border-color: #ff7300;
