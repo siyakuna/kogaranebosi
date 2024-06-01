@@ -71,7 +71,7 @@
        <div style="display:flex;"> <h2 style="font-size: 40px; color: #ff7300;">小雀　子星</h2> <div><div class="comment">補足</div> <span  class="comment-span">読みは"こがら ねぼし"です。"ちび"ではありません。よろしくお願いします。<br><br>追記:"ちんちくりん"は流石にひどくないですか上官。</span></div> </div>
         <hr>
         
-        <img class="icon" width="300px" src="void-ho4-icon.png">
+        <img class="icon droppable" width="300px" src="void-ho4-icon.png">
         <img class="tatie" src="void-ho4.PNG">
         <div class="popup-bg-cover"></div>
         <div class="main-fx">
@@ -85,7 +85,7 @@
             <div class="main-txt">
             <br>
             <span class="orange">説</span>明<br>一般的に普及してるVOIDの旧型。身長は144cmで小柄です。<span> <div class="comment">訂正</div> <span  class="comment-span">アンテナを含めると165cmです</span></span> <br>
-            HO3のパートナーロボットであり積極的に事件の捜査をHO3と共に行なっています。背中部分に羽を模した飛行器具がありますが現在は数cm浮く程度の機能しか持ち合わせていません。そのため特質した機能、技能は有していません。
+            HO3のパートナーロボットであり積極的に事件の捜査をHO3と共に行なっています。背中部分に羽を模した飛行器具がありますが飛翔ではなくエネルギー放出によって浮揚します。しかし浮揚機能も数センチ浮かび上がる程度です。そのため特質した機能、技能は有していません。
             他特徴として、頭の右側の通信用小型パラボラアンテナが備えられています。このアンテナに触れることを小雀はとても嫌がります。触れた場合離そうと抵抗しますが触れたことにより上手く力を出せなくなります。そのため触れ続けることは容易です。 
             <div class="comment">補足</div> <span  class="comment-span">アンテナを触ることは推奨しません。ぞわぞわするのでやめてください。</span>
             <br> 戦闘時は拳銃を使用し応戦します。<br><br>
@@ -95,25 +95,33 @@
            <span class="orange">署</span>内評価<p style="font-size: 13px; display: inline; color: #dfdfdf;"> 編集:HO3<div style=" display: inline;"><div class="comment">コメント</div> <span  class="comment-span">なぜ彼に書かせたのですか?</span></div></p> <br> 
            <br>
            <span class="orange">添</span>付ファイル<br> 
+           <input type="checkbox" id="png1" style="display: none;">
+           <label for="png1"><img class="fillbtn" src="pngIcon.png" alt="png" width="60px" style="z-index: 1030; pointer-events: initial;"></label> 
            <input type="checkbox" id="popup" style="display: none;">
-           <div class="fillpopup">
+           <label for="popup"><img class="fillbtn" src="fill.png" alt="???" width="60px" style="z-index: 1030; pointer-events: initial;"></label>
+           <span class="fillpopup">
             <input type="text" name="password" id="password" autocomplete="off" placeholder="ロックされてます。" style="z-index: 1030; pointer-events: initial;"> <input type="button" style="z-index: 1030; pointer-events: initial;" value="接続" id="connFile" onclick="connectSP()">
+           </span> 
+           <div class="png1">
+            <label for="png1" class="close">X</label><br>
+            <img src="void-ho4.PNG" alt="ho4" height="700px" style="z-index: 2022;pointer-events: initial;">
            </div>
-           <label for="popup"><img class="fillbtn" src="fill.png" alt="???" width="60px" style="z-index: 1030; pointer-events: initial;"></label> 
            <div style="display: inline;"><div class="comment">ログ</div> <span  class="comment-span">レベル5セキュリティがファイルに設定されました。<br>閲覧コードはHO4秘匿最初の()の中5文字 </span></div><br>
-            <span class="orange">補</span>遺<br>二件の追記があります。<br>
+           <br> 
+           <span class="orange">補</span>遺<br>二件の追記があります。<br>
             <input type="checkbox" id="hoi" class="hoi" style="pointer-events: initial;">
             <label for="hoi" class="hoi-h" style="pointer-events: initial;">+展開</label><br><br>
             <div class="hoi-p hoi-pop" style="width: auto;border: 1px dashed #ff7300;background-color: #fff4e100;">
                 <span style="color: #ffffff;"><span class="orange" style="font-size: 25px;">文</span>書の訂正と補足</span><br>
                 文書内に複数の訂正と補足のコメントを残しました。
                 <input type="checkbox" id="saveCheckbox" class="comment-h" style="pointer-events: initial;display: none;">
-            <label for="saveCheckbox" class="hoi-h come-hoi" style="pointer-events: initial;">コメントを表示</label>
+             <label for="saveCheckbox" class="hoi-h come-hoi" style="pointer-events: initial;">コメントを表示</label>
                 <br><span style="opacity: 0.7; color: #ffffff; ">edit:小雀子星</span><br><br><hr style="border: none;border-top: 2px dotted #ff7300">
                 <span style="color: #ffffff;"><span class="orange" style="font-size: 25px;">K</span>Pへ</span><br>
                 変なキャラシ提出すみませんでした。秘匿設定やステータス、いあきゃらのリンクは<span style="color: #fff700;;">添付ファイル</span>に記載しました。秘匿情報と公開情報をまとめたキャラ設定はいあきゃらに記載したので見にくいようならそちらを確認してください。
                 <br><span style="opacity: 0.7; color: #ffffff; ">edit:4897</span>
             </div>
+            <img src="grsn.PNG" alt="g" id="grsn" width="110px" style="pointer-events: stroke; cursor: grab; position: absolute; z-index: 1000; left: 1150px; top: 1150px;">
         </div>
         </p>
        </div>
@@ -129,6 +137,24 @@
 body{
     background-color: #fff700;
     overflow-x: hidden;
+}
+.fillbtn{
+    transition: all 0.2s;
+}
+.fillbtn:hover{
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 10px 1.5px #00000086);
+}
+
+.close:hover{
+    transform: rotate(180deg);
+}
+.close{
+    transition: all 1s;
+    display:inline-block;
+    pointer-events: initial;
+    color:#47d7ff;
+    font-size: 30px;
 }
 .Fout{
     backdrop-filter: invert(0%);
@@ -157,7 +183,15 @@ body{
     display: none;
     position: absolute;
     transform: translateX(60px);
-    
+}
+#png1:checked ~ .png1{
+    display: block;
+}
+.png1{
+    display: none;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0%;
 }
 
 .comment{
@@ -254,6 +288,10 @@ header{
     padding-right:100px; 
     color: #ffffff;
     font-family: monospace;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1500;
 }
 .logo{
     width: 110px;
@@ -403,6 +441,44 @@ function connectSP(){
         alert('読み取れませんでした')
     }
 }
+
+//グラサン
+grsn.onmousedown = function(event) {
+
+let shiftX = event.clientX - grsn.getBoundingClientRect().left;
+let shiftY = event.clientY - grsn.getBoundingClientRect().top;
+
+grsn.style.position = 'absolute';
+grsn.style.zIndex =  1501;
+document.body.append(grsn);
+
+moveAt(event.pageX, event.pageY);
+
+// ボールを（pageX、pageY）座標の中心に置く
+function moveAt(pageX, pageY) {
+  grsn.style.left = pageX - shiftX + 'px';
+  grsn.style.top = pageY - shiftY + 'px';
+}
+
+function onMouseMove(event) {
+  moveAt(event.pageX, event.pageY);
+}
+
+// (3) mousemove でボールを移動する
+document.addEventListener('mousemove', onMouseMove);
+
+// (4) ボールをドロップする。不要なハンドラを削除する
+grsn.onmouseup = function() {
+  document.removeEventListener('mousemove', onMouseMove);
+  grsn.onmouseup = null;
+};
+
+};
+
+grsn.ondragstart = function() {
+return false;
+};
+
     </script>
 </body>
 </html>
